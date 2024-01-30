@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #calendar{
+            border:1px solid #000;
+            border-radius: 20px;
+            background-color: rgb(74, 0, 0);
+            color:#fff;
+            margin-left: 500px;
+            font-size:60px;
+            height:80px;
+            width:350px;
+            padding:10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calendar</h1>
+    <div id="calendar">
+        
+    </div>
+    <script>        
+        function time(){
+            let dis=new Date();
+            let date=dis.getDate();
+            let month=dis.getMonth();
+            let m=month+1;
+            let year=dis.getFullYear();
+            document.getElementById('calendar').innerHTML=date+'/'+m+'/'+year;
+        }
+        time()
+    </script>
+</body>
+</html>
